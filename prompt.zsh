@@ -33,4 +33,4 @@ get_git_branch() {
 }
 
 # Build the prompt
-PROMPT='%F{cyan}$(get_git_relative_path)%f on %F{yellow}$(get_git_branch)%f'$'\n''%F{green}❯%f '
+PROMPT='%F{cyan}$(get_git_relative_path)%f$(git rev-parse --is-inside-work-tree &>/dev/null && echo " on %F{yellow}$(get_git_branch)%f")'$'\n''%F{green}❯%f '
