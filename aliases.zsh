@@ -49,3 +49,4 @@ alias bity="bun init -y"
 alias pf=promptfoo
 alias td="turbo dev"
 alias tb="turbo build"
+alias ws="windsurf"
