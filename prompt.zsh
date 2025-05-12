@@ -1,15 +1,3 @@
-# Configure Starship
-# ~/.config/starship.toml
-
-# eval "$(starship init zsh)"
-
-# PROMPT=''
-
-# fpath+=(~/.zsh/pure)
-# autoload -U promptinit
-# promptinit
-# prompt pure
-
 # CUSTOM PROMPT
 setopt prompt_subst # Enable command substitution in prompt
 
