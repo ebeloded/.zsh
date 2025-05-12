@@ -98,3 +98,14 @@ rmall() {
 lall() {
   find . -name $1 -type d -prune
 }
+
+# Navigate to git repository root
+groot() {
+  local gitroot=$(git rev-parse --show-toplevel 2>/dev/null)
+  if [[ -n "$gitroot" ]]; then
+    cd "$gitroot"
+  else
+    echo "Not in a git repository"
+    return 1
+  fi
+}
