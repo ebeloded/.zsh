@@ -1,14 +1,16 @@
 # CUSTOM PROMPT
 setopt prompt_subst # Enable command substitution in prompt
 
-# Show relative path from git root, or just the repo name at the root
+# Show git repo name and relative path from git root
 get_git_relative_path() {
   if git rev-parse --is-inside-work-tree &>/dev/null; then
     local gitroot=$(git rev-parse --show-toplevel)
+    local reponame="${gitroot##*/}"
+
     if [[ "$PWD" == "$gitroot" ]]; then
-      echo "${gitroot##*/}" # Just the repo folder name
+      echo "$reponame" # Just the repo folder name
     else
-      echo "${PWD#$gitroot/}" # Path relative to repo root
+      echo "$reponame/${PWD#$gitroot/}" # Repo name and path relative to repo root
     fi
   else
     echo "%~" # fallback to home-relative path
