@@ -21,6 +21,9 @@ A modular, organized ZSH setup with custom prompt, aliases, functions, and plugi
 
 ## Features
 
+### Shell Options
+- `AUTO_CD`: Navigate to directories without typing `cd`
+
 ### Custom Prompt
 - Shows relative path from git root
 - Displays git branch when in a repository
@@ -31,6 +34,7 @@ A modular, organized ZSH setup with custom prompt, aliases, functions, and plugi
 - `killport`: Kill processes using specific ports
 - `rmall`: Recursively remove specific directories
 - `lall`: Find directories by name
+- `groot`: Navigate to git repository root
 
 ### Aliases
 - Shortcuts for package managers (pnpm, bun)
