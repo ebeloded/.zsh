@@ -1,27 +1,41 @@
 # ~/.zsh/path.zsh
-# PATH management
+# PATH management using array-based approach for better organization and performance
 
-# Add paths from most to least important (first entry takes precedence)
+# Initialize path_dirs array with directories to be added to PATH
+# Order from highest to lowest precedence (first entry takes highest precedence)
+typeset -U path_dirs
+path_dirs=(
+  # Home bin directories
+  "$HOME/bin"
+  "$HOME/.local/bin"
 
-# Home bin directory
-export PATH="$HOME/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
+  # Package managers
+  "$HOME/Library/pnpm" # PNPM_HOME
+  "$HOME/.bun/bin"     # BUN_INSTALL/bin
 
-# Package managers
-export PNPM_HOME="/Users/ebeloded/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
+  # Development tools
+  "$HOME/.console-ninja/.bin"
+  "$HOME/.codeium/windsurf/bin"
 
+  # Languages and frameworks
+  "$HOME/.modular/pkg/packages.modular.com_mojo/bin"
+  "$HOME/miniconda3/bin"
+
+  # System paths
+  "/bin"
+)
+
+# Export package manager home directories
+export PNPM_HOME="$HOME/Library/pnpm"
 export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+export MODULAR_HOME="$HOME/.modular"
 
-# Development tools
-export PATH="~/.console-ninja/.bin:$PATH"
-export PATH="/Users/ebeloded/.codeium/windsurf/bin:$PATH"
+# Add all directories to PATH
+for dir in $path_dirs; do
+  if [[ -d "$dir" ]]; then
+    path=("$dir" $path)
+  fi
+done
 
-# Languages and frameworks
-export MODULAR_HOME="/Users/ebeloded/.modular"
-export PATH="/Users/ebeloded/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
-export PATH="/Users/ebeloded/miniconda3/bin:$PATH"
-
-# System paths
-export PATH="/bin:$PATH"
+# Export the modified PATH
+export PATH
