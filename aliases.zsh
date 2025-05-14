@@ -1,13 +1,37 @@
 # ~/.zsh/aliases.zsh
-# Shell aliases
+# Shell aliases organized by category
 
-# Add your aliases below
+# ===== File System Navigation & Operations =====
+
+# Navigation
+alias c="z -c"           # Smart directory jumping with z
+alias ..="cd .."         # Go up one directory
+alias ...="cd ../.."     # Go up two directories
+alias ....="cd ../../.." # Go up three directories
+alias -- -="cd -"        # Go to previous directory
+
+# Listing files
+alias ls="ls -G"      # Colorized ls output
+alias ll="ls -lh"     # Long format, human-readable sizes
+alias la="ls -lah"    # Long format, including hidden files
+alias lt="ls -lhtr"   # Sort by time, newest last
+alias lsd="ls -ld */" # List only directories
+
+# File operations
+alias cp="cp -iv"       # Interactive and verbose copy
+alias mv="mv -iv"       # Interactive and verbose move
+alias rm="rm -iv"       # Interactive and verbose remove
+alias mkdir="mkdir -pv" # Create parent directories as needed, verbose
+
+# ===== Development Tools =====
 
 # Python
 alias pip="pip3"
 alias python="python3"
+alias py="python3"
+alias pyenv="python -m venv venv && source venv/bin/activate" # Create and activate virtual environment
 
-# PNPM
+# PNPM - Package manager
 alias p="pnpm"
 alias px="pnpx"
 alias pa="pnpm add"
@@ -32,28 +56,7 @@ alias pd="pnpm run dev --"
 alias pub="pnpm publish"
 alias pv="pnpm version"
 
-# Git
-alias git=hub
-alias gs="git status"
-alias ga="git add"
-alias gc="git commit -m"
-alias gp="git push"
-alias gl="git pull"
-alias gd="git diff"
-alias gb="git branch"
-alias gco="git checkout"
-alias glo="git log --oneline"
-alias grb="git rebase"
-alias gst="git stash"
-alias gstp="git stash pop"
-
-# Infrastructure
-alias tf=terraform
-
-# Navigation
-alias c="z -c"
-
-# Bun
+# Bun - JavaScript runtime & package manager
 alias b="bun"
 alias bx="bunx"
 alias bd="bun run dev"
@@ -70,8 +73,61 @@ alias bag="bun add -g"
 alias bit="bun init"
 alias bity="bun init -y"
 
-# Tools
-alias pf=promptfoo
+# Turbo - Monorepo tool
 alias td="turbo dev"
 alias tb="turbo build"
+
+# Other tools
+alias pf="promptfoo"
 alias ws="windsurf"
+
+# ===== Git & Version Control =====
+
+# Git with hub extension
+alias git="hub"
+alias gs="git status -sb" # Short status with branch info
+alias ga="git add"
+alias gaa="git add --all" # Add all changes
+alias gc="git commit -m"
+alias gca="git commit --amend" # Amend previous commit
+alias gp="git push"
+alias gpf="git push --force-with-lease" # Safer force push
+alias gl="git pull"
+alias gf="git fetch --all" # Fetch all remotes
+alias gd="git diff"
+alias gds="git diff --staged" # Diff staged changes
+alias gb="git branch"
+alias gbd="git branch -d" # Delete branch
+alias gco="git checkout"
+alias gcb="git checkout -b"                      # Create and checkout new branch
+alias glo="git log --oneline --graph --decorate" # Pretty log
+alias grb="git rebase"
+alias gst="git stash"
+alias gstp="git stash pop"
+alias gsta="git stash apply"     # Apply stash without removing it
+alias gsl="git stash list"       # List stashes
+alias grh="git reset HEAD~"      # Undo last commit, keep changes
+alias grs="git restore --staged" # Unstage changes
+
+# ===== System & Infrastructure =====
+
+# Infrastructure
+alias tf="terraform"
+alias tfi="terraform init"
+alias tfp="terraform plan"
+alias tfa="terraform apply"
+
+# System
+alias dud="du -d 1 -h"          # Disk usage by directory, human readable
+alias duf="du -sh *"            # Disk usage by file, human readable
+alias fd="find . -type d -name" # Find directories
+alias ff="find . -type f -name" # Find files
+
+# Process management
+alias psa="ps aux"        # List all processes
+alias psg="ps aux | grep" # Search processes
+
+# Network
+alias myip="curl -s https://api.ipify.org" # Get public IP
+alias localip="ipconfig getifaddr en0"     # Get local IP
+alias ports="lsof -i -P -n | grep LISTEN"  # Show listening ports
