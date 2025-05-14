@@ -2,3 +2,5 @@ secrets.zsh
 zsh-z
 zsh-autosuggestions
 zsh-syntax-highlighting
+
+**/.claude/settings.local.json
