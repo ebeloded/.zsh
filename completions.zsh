@@ -1,6 +1,3 @@
-# Bun completions
-[ -s "/Users/ebeloded/.bun/_bun" ] && source "/Users/ebeloded/.bun/_bun"
-
 # NVM bash completion
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 

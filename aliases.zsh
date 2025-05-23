@@ -80,6 +80,7 @@ alias tb="turbo build"
 # Other tools
 alias pf="promptfoo"
 alias ws="windsurf"
+alias claude="~/.claude/local/claude"
 
 # ===== Git & Version Control =====
 
