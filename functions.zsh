@@ -109,3 +109,16 @@ groot() {
     return 1
   fi
 }
+
+# Handle "cd ..." patterns with spaces
+cd() {
+  if [[ "$1" == "..." ]]; then
+    builtin cd ../..
+  elif [[ "$1" == "...." ]]; then
+    builtin cd ../../..
+  elif [[ "$1" == "....." ]]; then
+    builtin cd ../../../..
+  else
+    builtin cd "$@"
+  fi
+}
