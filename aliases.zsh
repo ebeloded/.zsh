@@ -4,7 +4,7 @@
 # ===== File System Navigation & Operations =====
 
 # Navigation
-alias c="z -c"           # Smart directory jumping with z
+alias zc="z -c"           # Smart directory jumping with z
 alias ..="cd .."         # Go up one directory
 alias ...="cd ../.."     # Go up two directories
 alias ....="cd ../../.." # Go up three directories
@@ -80,6 +80,14 @@ alias tb="turbo build"
 # Other tools
 alias pf="promptfoo"
 alias ws="windsurf"
+
+# Claude CLI
+alias c="claude"
+alias cc="claude -c"
+alias cr="claude -r"
+alias cy="claude --permission-mode bypassPermissions"
+alias ccy="claude -c --permission-mode bypassPermissions"
+alias cry="claude -r --permission-mode bypassPermissions"
 
 # ===== Git & Version Control =====
 
