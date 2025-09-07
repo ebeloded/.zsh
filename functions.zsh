@@ -3,7 +3,7 @@
 
 # Add your functions below
 
-mdcd() {
+md() {
   mkdir -p -- "$1" &&
     cd -P -- "$1"
 }
