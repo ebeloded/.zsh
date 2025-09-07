@@ -88,6 +88,8 @@ alias cr="claude -r"
 alias cy="claude --permission-mode bypassPermissions"
 alias ccy="claude -c --permission-mode bypassPermissions"
 alias cry="claude -r --permission-mode bypassPermissions"
+alias ca="cursor-agent"
+alias cur="cursor"
 
 # ===== Git & Version Control =====
 
