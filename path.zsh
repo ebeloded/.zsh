@@ -12,6 +12,7 @@ path_dirs=(
   # Package managers
   "$HOME/Library/pnpm" # PNPM_HOME
   "$HOME/.bun/bin"     # BUN_INSTALL/bin
+  "$HOME/.npm-global/bin"
 
   # Development tools
   "$HOME/.console-ninja/.bin"
@@ -28,7 +29,6 @@ path_dirs=(
 # Export package manager home directories
 export PNPM_HOME="$HOME/Library/pnpm"
 export BUN_INSTALL="$HOME/.bun"
-export MODULAR_HOME="$HOME/.modular"
 
 # Add all directories to PATH
 for dir in $path_dirs; do
