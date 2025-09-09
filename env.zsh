@@ -6,7 +6,7 @@ setopt AUTO_CD  # Allow changing directories without 'cd'
 
 # Add your environment variable exports below
 
-export SVELTE_INSPECTOR_TOGGLE=alt-shift
-export NVM_DIR="$HOME/.nvm"
+# Editor configuration
+export EDITOR=cursor
+export VISUAL=cursor
 export BROWSER=arc
-export MODULAR_HOME="/Users/ebeloded/.modular"
