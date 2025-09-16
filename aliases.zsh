@@ -107,6 +107,7 @@ alias gp="git push"
 alias gpf="git push --force-with-lease" # Safer force push
 alias gl="git pull"
 alias gf="git fetch --all" # Fetch all remotes
+alias gfom="git fetch origin main:main" # Fetch origin main to local main
 alias gd="git diff"
 alias gds="git diff --staged" # Diff staged changes
 alias gb="git branch"
