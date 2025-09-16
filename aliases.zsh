@@ -68,6 +68,8 @@ alias brt="bun run test"
 alias brm="bun remove"
 alias brmg="bun remove -g"
 alias bup="bun update"
+alias bug="bun update -g"
+alias bugl="bun update -g --latest"
 alias bad="bun add -d"
 alias bag="bun add -g"
 alias bit="bun init"
@@ -82,6 +84,7 @@ alias pf="promptfoo"
 alias ws="windsurf"
 
 # Claude CLI
+alias claude="~/.claude/local/claude"
 alias c="claude"
 alias cc="claude -c"
 alias cr="claude -r"
@@ -118,6 +121,14 @@ alias gsta="git stash apply"     # Apply stash without removing it
 alias gsl="git stash list"       # List stashes
 alias grh="git reset HEAD~"      # Undo last commit, keep changes
 alias grs="git restore --staged" # Unstage changes
+
+# Git worktree
+alias gw="git worktree"          # Git worktree command
+alias gwa="git worktree add"     # Add new worktree
+alias gwl="git worktree list"    # List all worktrees
+alias gwr="git worktree remove"  # Remove worktree
+alias gwp="git worktree prune"   # Prune worktree references
+alias gwrf="git worktree remove --force" # Force remove worktree
 
 # ===== System & Infrastructure =====
 
