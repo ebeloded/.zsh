@@ -1,3 +1,6 @@
 {
-  "cSpell.words": ["killport", "lall", "rmall"]
+  "cSpell.words": ["killport", "lall", "rmall"],
+  "search.exclude": {
+    "**/zsh-*": true
+  }
 }
