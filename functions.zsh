@@ -109,3 +109,14 @@ groot() {
     return 1
   fi
 }
+
+# Override cd to handle ... and .... patterns
+cd() {
+  if [[ "$1" == "..." ]]; then
+    builtin cd ../..
+  elif [[ "$1" == "...." ]]; then
+    builtin cd ../../..
+  else
+    builtin cd "$@"
+  fi
+}
