@@ -3,7 +3,7 @@
 
 # Add your functions below
 
-mdcd() {
+md() {
   mkdir -p -- "$1" &&
     cd -P -- "$1"
 }
@@ -110,12 +110,14 @@ groot() {
   fi
 }
 
-# Override cd to handle ... and .... patterns
+# Handle "cd ..." patterns with spaces
 cd() {
   if [[ "$1" == "..." ]]; then
     builtin cd ../..
   elif [[ "$1" == "...." ]]; then
     builtin cd ../../..
+  elif [[ "$1" == "....." ]]; then
+    builtin cd ../../../..
   else
     builtin cd "$@"
   fi

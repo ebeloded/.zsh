@@ -4,7 +4,7 @@
 # ===== File System Navigation & Operations =====
 
 # Navigation
-alias c="z -c"           # Smart directory jumping with z
+alias zc="z -c"           # Smart directory jumping with z
 alias ..="cd .."         # Go up one directory
 alias ...="cd ../.."     # Go up two directories
 alias ....="cd ../../.." # Go up three directories
@@ -96,6 +96,8 @@ alias brt="bun run test"
 alias brm="bun remove"
 alias brmg="bun remove -g"
 alias bup="bun update"
+alias bug="bun update -g"
+alias bugl="bun update -g --latest"
 alias bad="bun add -d"
 alias bag="bun add -g"
 alias bit="bun init"
@@ -108,6 +110,17 @@ alias tb="turbo build"
 # Other tools
 alias pf="promptfoo"
 alias ws="windsurf"
+
+# Claude CLI
+alias claude="~/.claude/local/claude"
+alias c="claude"
+alias cc="claude -c"
+alias cr="claude -r"
+alias cy="claude --permission-mode bypassPermissions"
+alias ccy="claude -c --permission-mode bypassPermissions"
+alias cry="claude -r --permission-mode bypassPermissions"
+alias ca="cursor-agent"
+alias cur="cursor"
 
 # ===== Git & Version Control =====
 
@@ -122,6 +135,7 @@ alias gp="git push"
 alias gpf="git push --force-with-lease" # Safer force push
 alias gl="git pull"
 alias gf="git fetch --all" # Fetch all remotes
+alias gfom="git fetch origin main:main" # Fetch origin main to local main
 alias gd="git diff"
 alias gds="git diff --staged" # Diff staged changes
 alias gb="git branch"
@@ -139,6 +153,14 @@ alias grs="git restore --staged" # Unstage changes
 alias gfo="git fetch origin main:main"
 alias gcm="git checkout main"
 
+
+# Git worktree
+alias gw="git worktree"          # Git worktree command
+alias gwa="git worktree add"     # Add new worktree
+alias gwl="git worktree list"    # List all worktrees
+alias gwr="git worktree remove"  # Remove worktree
+alias gwp="git worktree prune"   # Prune worktree references
+alias gwrf="git worktree remove --force" # Force remove worktree
 
 # ===== System & Infrastructure =====
 
