@@ -56,6 +56,34 @@ alias pd="pnpm run dev --"
 alias pub="pnpm publish"
 alias pv="pnpm version"
 
+# NPM - Node package manager
+alias n="npm"
+alias nx="npx"
+alias ni="npm install"
+alias nid="npm install --save-dev"
+alias nis="npm install --save"
+alias nig="npm install --global"
+alias nr="npm run"
+alias nt="npm run test"
+alias nb="npm run build"
+alias nd="npm run dev"
+alias nstart="npm start"
+alias nstop="npm stop"
+alias nrestart="npm restart"
+alias nrm="npm remove"
+alias nrmg="npm remove --global"
+alias nu="npm update"
+alias nout="npm outdated"
+alias nls="npm list"
+alias nlsg="npm list --global"
+alias nv="npm version"
+alias np="npm publish"
+alias nci="npm ci"
+alias naudit="npm audit"
+alias nauditf="npm audit fix"
+alias ninit="npm init"
+alias ninity="npm init -y"
+
 # Bun - JavaScript runtime & package manager
 alias b="bun"
 alias bx="bunx"
@@ -108,6 +136,9 @@ alias gsta="git stash apply"     # Apply stash without removing it
 alias gsl="git stash list"       # List stashes
 alias grh="git reset HEAD~"      # Undo last commit, keep changes
 alias grs="git restore --staged" # Unstage changes
+alias gfo="git fetch origin main:main"
+alias gcm="git checkout main"
+
 
 # ===== System & Infrastructure =====
 
@@ -131,3 +162,10 @@ alias psg="ps aux | grep" # Search processes
 alias myip="curl -s https://api.ipify.org" # Get public IP
 alias localip="ipconfig getifaddr en0"     # Get local IP
 alias ports="lsof -i -P -n | grep LISTEN"  # Show listening ports
+
+# Tailscale
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+alias ts="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+
+
+alias claude="/Users/zhenya/.claude/local/claude"
