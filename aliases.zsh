@@ -112,7 +112,6 @@ alias pf="promptfoo"
 alias ws="windsurf"
 
 # Claude CLI
-alias claude="~/.claude/local/claude"
 alias c="claude"
 alias cc="claude -c"
 alias cr="claude -r"
