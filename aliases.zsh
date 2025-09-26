@@ -189,4 +189,3 @@ alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 alias ts="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
 
-alias claude="/Users/zhenya/.claude/local/claude"
