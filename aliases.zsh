@@ -110,6 +110,7 @@ alias tb="turbo build"
 # Other tools
 alias pf="promptfoo"
 alias ws="windsurf"
+alias oc="opencode"
 
 # Claude CLI
 alias c="claude"
@@ -188,4 +189,5 @@ alias ports="lsof -i -P -n | grep LISTEN"  # Show listening ports
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 alias ts="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
-
+# Vibe Kanban
+alias vk="bx vibe-kanban"
