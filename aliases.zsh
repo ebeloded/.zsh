@@ -191,3 +191,12 @@ alias ts="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
 # Vibe Kanban
 alias vk="bx vibe-kanban"
+
+
+# Worktree CLI
+alias wtc="wt setup -t"
+alias wtrf="wt rm -f"
+alias wtp="wt purge"
+alias wtpr="wt pr -s"
+
+alias cx='codex --full-auto'

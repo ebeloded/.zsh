@@ -5,3 +5,4 @@ zsh-syntax-highlighting
 
 **/.claude/settings.local.json
 .DS_Store
+*.log
