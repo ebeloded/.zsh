@@ -199,4 +199,4 @@ alias wtrf="wt rm -f"
 alias wtp="wt purge"
 alias wtpr="wt pr -s"
 
-alias cx='codex --full-auto'
+alias cx="codex --dangerously-bypass-approvals-and-sandbox"
