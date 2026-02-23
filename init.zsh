@@ -26,22 +26,25 @@ source_file "$ZSH_DIR/path.zsh"
 # 2. Environment variables
 source_file "$ZSH_DIR/env.zsh"
 
-# 3. Prompt configuration
+# 3. History configuration
+source_file "$ZSH_DIR/history.zsh"
+
+# 4. Prompt configuration
 source_file "$ZSH_DIR/prompt.zsh"
 
-# 4. Aliases
+# 5. Aliases
 source_file "$ZSH_DIR/aliases.zsh"
 
-# 5. Custom functions
+# 6. Custom functions
 source_file "$ZSH_DIR/functions.zsh"
 
-# 6. Private environment variables (not tracked in git)
+# 7. Private environment variables (not tracked in git)
 source_file "$ZSH_DIR/secrets.zsh"
 
-# 7. Completions (should be loaded before plugins)
+# 8. Completions (should be loaded before plugins)
 source_file "$ZSH_DIR/completions.zsh"
 
-# 8. Plugins (loaded last to avoid conflicts)
+# 9. Plugins (loaded last to avoid conflicts)
 source_file "$ZSH_DIR/plugins.zsh"
 
 # Uncomment to display ZSH startup time report
