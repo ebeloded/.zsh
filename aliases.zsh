@@ -125,7 +125,7 @@ alias cur="cursor"
 # ===== Git & Version Control =====
 
 # Lazygit
-alias lz="lazygit"
+alias lg="lazygit"
 
 # Git with hub extension
 alias git="hub"
