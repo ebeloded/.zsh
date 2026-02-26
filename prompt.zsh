@@ -17,9 +17,33 @@ get_git_relative_path() {
   fi
 }
 
-# Get current branch name
-get_git_branch() {
-  git rev-parse --abbrev-ref HEAD 2>/dev/null
+# Get branch, dirty state, and ahead/behind in a single git call
+get_git_info() {
+  git rev-parse --is-inside-work-tree &>/dev/null || return
+
+  local status_output
+  status_output=$(git status --porcelain=v2 --branch 2>/dev/null)
+
+  local branch
+  branch=$(awk '/^# branch.head/ {print $3}' <<< "$status_output")
+  [[ "$branch" == "(detached)" ]] && branch=$(git rev-parse --short HEAD 2>/dev/null)
+
+  local dirty=""
+  grep -q "^[^#]" <<< "$status_output" && dirty="%F{red}*%f"
+
+  local ahead=0 behind=0
+  local ab_line
+  ab_line=$(awk '/^# branch.ab/ {print $3, $4}' <<< "$status_output")
+  if [[ -n "$ab_line" ]]; then
+    ahead=${${ab_line%% *}#+}
+    behind=${${ab_line##* }#-}
+  fi
+
+  local result=" on %F{yellow}${branch}%f${dirty}"
+  (( ahead > 0 )) && result+=" %F{cyan}↑${ahead}%f"
+  (( behind > 0 )) && result+=" %F{red}↓${behind}%f"
+
+  echo "$result"
 }
 
 get_ssh_info() {
@@ -30,4 +54,4 @@ get_ssh_info() {
 }
 
 # Build the prompt
-PROMPT='%F{cyan}$(get_git_relative_path)%f$(git rev-parse --is-inside-work-tree &>/dev/null && echo " on %F{yellow}$(get_git_branch)%f")$(get_ssh_info)'$'\n''%F{green}❯%f '
+PROMPT='%F{cyan}$(get_git_relative_path)%f$(get_git_info)$(get_ssh_info)'$'\n''%F{green}❯%f '
