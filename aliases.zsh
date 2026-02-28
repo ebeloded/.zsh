@@ -110,7 +110,9 @@ alias tb="turbo build"
 # Other tools
 alias pf="promptfoo"
 alias ws="windsurf"
-alias oc="opencode"
+alias oc="openclaw"
+alias oct="openclaw tui"
+alias ocd="opencode"
 
 # Claude CLI
 alias c="claude"
