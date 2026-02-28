@@ -205,3 +205,4 @@ alias wtp="wt purge"
 alias wtpr="wt pr -s"
 
 alias cx="codex --dangerously-bypass-approvals-and-sandbox"
+alias oct="openclaw tui"
